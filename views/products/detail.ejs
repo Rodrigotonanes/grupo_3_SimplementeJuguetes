@@ -2,7 +2,7 @@
 <html lang="en">
 
 <%- include("./partials/head") %>
-
+<link rel="stylesheet" href="/css/style.css" type="text/css"/>
 <body>
     <!-- Header -->
 
@@ -86,8 +86,11 @@
                 <section class="rp-products">
                     <% for( let i = 0; i < ps.length; i++ ) { %>
                         <article class="rp-product">
-                            <a class="rp-product-link" href="/detalle/<%= ps[i].id %>"><img class="rp-product-img" src="<%= ps[i].firstImg %>"
-                                    alt="Producto <%= ps[i].id %>"></a>
+                            <a class="rp-product-link" href="/detalle/<%= ps[i].id %>">
+                                <figure class="figureDetDin">
+                                <img class="rp-product-img" src="/imagen/<%= ps[i].firstImg %>"
+                                    alt="Producto <%= ps[i].id %>"></figure>
+                                </a>
                             <h3 class="rp-product-title"><%= ps[i].name %></h3>
                             <p class="rp-product-price">$<%= ps[i].price %></p>
                         </article>
