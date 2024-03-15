@@ -14,14 +14,14 @@
 
         <div class="mb-3 col-6">
           <label for="number" class="form-label btn-success">id</label>
-          <input type="number" class="form-control" id="number" aria-describedby="number">
+          <input type="number" class="form-control" id="number" aria-describedby="number" value="<%= product.id %>">
           <hr>
         </div>
 
 
         <div class="mb-3 col-6 ">
           <label for="exampleInputPassword1" class="form-label">nombre</label>
-          <input type="text" class="form-control" id="exampleInputPassword1">
+          <input type="text" class="form-control" value="<%= product.name %>" id="exampleInputPassword1">
           <hr>
         </div>
 
@@ -34,19 +34,19 @@
 
         <div class="mb-3   col-6">
           <label for="exampleInputEmail1" class="form-label"> precio</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= product.price %>">
           <hr>
         </div>
 
         <div class="mb-3    col-6 ">
           <label for="exampleInputPassword1" class="form-label">fabricante</label>
-          <input type="text" class="form-control" id="exampleInputPassword1">
+          <input type="text" class="form-control" id="exampleInputPassword1" value="<%= product.manufacturer %>">
           <hr>
         </div>
 
         <div class="mb-3 col-6 ">
           <label for="exampleInputPassword1" class="form-label">linea</label>
-          <input type="text" class="form-control" id="exampleInputPassword1">
+          <input type="text" class="form-control" id="exampleInputPassword1" value="<%= product.line %>">
           <hr>
         </div>
 
@@ -158,10 +158,10 @@
 
         <div class="col-12">
           <button type="submit" class="btn btn-success  ">guardar</button>
-
-          <button type="reset" class="btn btn-danger  ">borrar</button>
         </div>
       </form>
+      <form action="/admin/eliminar-producto/<%= product.id %>?_method=DELETE" method="POST">
+      <input type="submit" value="BORRAR" class="btn btn-danger"></form>
       <footer class="sub-footer">
 
       </footer>
